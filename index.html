@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/plugins.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Projeto Pokemon - Codeboost</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="" class="logo">
+                <img src="assets/logo.svg" alt="Logo Pokemon" title="Logo Pokemon">
+            </a>
+            <p>Case Study  ->  Code<strong>Boost</strong></p>
+        </div>
+    </header>
+
+    <section class="s-area-slide-hero">
+        <div class="slide-hero">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="main-area">
+                        <div class="container">
+                            <div class="text">
+                                <div class="tag">
+                                    <div class="icon">
+                                        <img src="assets/bag-red.svg" alt="Ícone que representa uma mochila">
+                                    </div>
+                                    <span>pokedex</span>
+                                </div>
+                                <h1>Who is that Pokémon?</h1>
+                                <p>The perfect guide for those who want to hunt Pokémons around the world</p>
+
+                                <div class="image">
+                                    <img src="assets/lighting.svg" class="lights" alt="Luzes da pokeball" title="Luzes da pokebola">
+                                    <img src="assets/pokeball-red.png" class="pokeball" alt="Pokeball" title="Pokeball">
+                                </div>
+                            </div>
+                            <div class="area-explore">
+                                <div class="txt">
+                                    <div class="icon">
+                                        <img src="assets/arrow-down-white.svg" alt="">
+                                    </div>
+                                    <span>explore</span>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide blue">
+                    <div class="main-area">
+                        <div class="container">
+                            <div class="text">
+                                <div class="tag blue-tag">
+                                    <div class="icon">
+                                        <img src="assets/bag-red.svg" alt="Ícone que representa uma mochila">
+                                    </div>
+                                    <span>pokedex</span>
+                                </div>
+                                <h1>Catch them all!</h1>
+                                <p>The perfect guide for those who want to hunt Pokémons around the world</p>
+
+                                <div class="image">
+                                    <img src="assets/lighting.svg" class="lights" alt="Luzes da pokeball" title="Luzes da pokebola">
+                                    <img src="assets/pokeball-blue.png" class="pokeball" alt="Pokeball" title="Pokeball">
+                                </div>
+                            </div>
+                            <div class="area-explore">
+                                <div class="txt">
+                                    <div class="icon">
+                                        <img src="assets/arrow-down-white.svg" alt="">
+                                    </div>
+                                    <span>explore</span>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s-all-info-pokemons">
+        <div class="container">
+            <div class="top">
+                <h2>Select your Pokémon</h2>
+                <div class="search">
+                    <input type="text" placeholder="Search name or code" id="js-input-search">
+                    <button class="button" id="js-btn-search">
+                        <img src="assets/icon-search.svg" alt="Ícone de pesquisar">
+                    </button>
+                </div>
+            </div>
+            <div class="area-all">
+                <div class="left-container">
+                    <ul id="js-type-area">
+                        <li>
+                            <button class="type-filter active all" code="">
+                                <div class="icon">
+                                    <img src="assets/icon-all.svg" alt="">
+                                </div>
+                                <span>All</span>
+                            </button>
+                        </li>
+                        <!-- <li>
+                            <button class="type-filter bug">
+                                <div class="icon">
+                                    <img src="assets/icon-types/bug.svg" alt="">
+                                </div>
+                                <span>Bug</span>
+                            </button>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="right-container">
+                    <div class="top-container">
+                        <div>
+                            <img src="assets/icon-pokeball.svg" alt="">
+                            <span><strong id="js-count-pokemons">150</strong> Pokémons</span>
+                        </div>
+                    </div>
+                    <div class="select-custom">
+                        <button class="item-selected js-open-select-cumtom">
+                            <span>Show:</span>
+                            <strong>All</strong>
+                        </button>
+                        <ul class="dropdown-select">
+                            <li>
+                                <button class="type-filter active" code="">
+                                    <div class="icon">
+                                        <img src="assets/icon-all.svg" alt="">
+                                    </div>
+                                    <span>All</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="all" id="js-list-pokemons">
+                       
+                    </div>
+                    <button class="btn-load-more" id="js-btn-load-more">
+                        Load more Pokémons
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="text">
+                <h3>Módulo JavaScript</h3>
+                <p>Consumindo e exibindo dados de uma API</p>
+            </div>
+            <a href="https://codeboost.com.br" target="_blank">
+                <img src="assets/codeboost.svg" alt="">
+            </a>
+        </div>
+    </footer>
+
+    <div class="modal" typePokemonModal="grass" id="js-modal-datails">
+        <div class="overlay"></div>
+        <div class="box">
+            <button class="close js-close-modal-datails-pokemon">
+                <img src="assets/close.svg" alt="">
+            </button>
+            <div class="left-container">
+                <div class="icon">
+                    <img src="" id="js-image-type-icon" alt="">
+                </div>
+                <div class="image">
+                    <img src="" alt="" id="js-image-pokemon-modal">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="name">
+                    <h2 id="js-name-pokemon-modal"></h2>
+                    <span id="js-code-pokemon-modal"></span>
+                </div>
+                <ul class="type" id="js-types-pokemon">
+                    <!-- <li>
+                        <span class="tag-type grass">
+                            Grass
+                        </span>
+                    </li> -->
+                </ul>
+                <ul class="info">
+                    <li>
+                        <span>Height</span>
+                        <strong id="js-height-pokemon">0.7m</strong>
+                    </li>
+                    <li>
+                        <span>Weight</span>
+                        <strong id="js-weight-pokemon">6.9kg</strong>
+                    </li>
+                    <li class="box-referencia-habilidades">
+                        <span>Abilities</span>
+                        <div class="boxAbilits">
+                            <strong id="js-main-abilities-pokemon">Overgrow</strong>
+                            <button id="js-btn-outers-abilits"><img src="assets/icon-mais-abilits.svg" alt=""></button>
+                            <button class="btn-outers-abilits-close" id="js-btn-outers-abilits-close"><img src="assets/icon-mais-abilits.svg" alt=""></button>
+                        </div>
+                        <div class="outras-habilidades">
+                            <ul id="js-storage-outers-abilits">
+                                
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="weak">
+                    <h4>Weaknesses</h4>
+                    <ul id="js-area-weak">
+                        <li>
+                            <span class="tag-type fire">
+                                Fire
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="stats">
+                    <h5>Stats</h5>
+                    <div class="all">
+                        <div class="item">
+                            <span>HP</span>
+                            <div class="bar-status">
+                                <div class="bar" id="js-stats-hp"></div>
+                                <ul class="separator">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>Attack</span>
+                            <div class="bar-status">
+                                <div class="bar" id="js-stats-attack"></div>
+                                <ul class="separator">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>Defense</span>
+                            <div class="bar-status">
+                                <div class="bar" id="js-stats-defense"></div>
+                                <ul class="separator">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>Sp. attack</span>
+                            <div class="bar-status">
+                                <div class="bar" id="js-stats-spAttack"></div>
+                                <ul class="separator">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>Sp. Defense</span>
+                            <div class="bar-status">
+                                <div class="bar" id="js-stats-spDefense"></div>
+                                <ul class="separator">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>Speed</span>
+                            <div class="bar-status">
+                                <div class="bar" id="js-stats-speed"></div>
+                                <ul class="separator">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.18/dist/sweetalert2.all.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
